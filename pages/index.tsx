@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -14,110 +14,175 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <main>
+        <div className="flex flex-col justify-center items-center min-h-screen">
+          {/* Header section */}
+          <div className="w-full bg-white shadow">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between items-center h-16">
+                {/* Navigation bar */}
+                <div className="flex-shrink-0">
+                  <Image src="/logo.svg" alt="Logo" height={8} width={8} />
+                </div>
+                <div className="hidden md:block">
+                  <div className="ml-10 flex items-baseline space-x-4">
+                    <a
+                      href="#"
+                      className="text-gray-400 hover:text-gray-500 font-medium"
+                    >
+                      Home
+                    </a>
+
+                    <a
+                      href="#"
+                      className="text-gray-400 hover:text-gray-500 font-medium"
+                    >
+                      Shop
+                    </a>
+
+                    <a
+                      href="#"
+                      className="text-gray-400 hover:text-gray-500 font-medium"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+          {/* Hero section */}
+          <div className="w-full bg-gray-100 py-32">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="lg:text-left">
+                <h2 className="text-4xl font-bold text-gray-800 md:text-5xl">
+                  Welcome to our store
+                  <br />
+                  <span className="text-indigo-600">
+                    Get your favorites now
+                  </span>
+                </h2>
+                <div className="mt-5">
+                  <button className="inline-flex text-white font-medium bg-indigo-600 hover:bg-indigo-500 py-3 px-6 rounded-full">
+                    Shop now
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
+          {/* Featured products section */}
+          <div className="w-full my-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Product card */}
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div className="h-48 w-full relative">
+                    <Image
+                      src="/product-placeholder-01.jpg"
+                      alt="Product image"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-medium text-gray-900">
+                      <a href="#">Product name</a>
+                    </h3>
+                    <p className="text-gray-500">$120</p>
+                  </div>
+                </div>
+                {/* Product card */}
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div className="h-48 w-full relative">
+                    <Image
+                      src="/product-placeholder-01.jpg"
+                      alt="Product image"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-medium text-gray-900">
+                      <a href="#">Product name</a>
+                    </h3>
+                    <p className="text-gray-500">$120</p>
+                  </div>
+                </div>
+                {/* Product card */}
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div className="h-48 w-full relative">
+                    <Image
+                      src="/product-placeholder-01.jpg"
+                      alt="Product image"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-medium text-gray-900">
+                      <a href="#">Product name</a>
+                    </h3>
+                    <p className="text-gray-500">$120</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
+          {/* Footer section */}
+          <div className="w-full bg-gray-800 text-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+              <div className="flex flex-wrap justify-left">
+                <div className="w-full lg:w-1/4 px-4">
+                  <h3 className="text-xl font-medium mb-2">About us</h3>
+                  <p className="text-gray-300 leading-loose">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco.
+                  </p>
+                </div>
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
+                <div className="w-full lg:w-1/4 px-4">
+                  <h3 className="text-xl font-medium mb-2">Social media</h3>
+                  <ul>
+                    <li>
+                      <a href="#" className="hover:text-gray-400">
+                        Facebook
+                      </a>
+                    </li>
+                    <li className="mt-4">
+                      <a href="#" className="hover:text-gray-400">
+                        Twitter
+                      </a>
+                    </li>
+                    <li className="mt-4">
+                      <a href="#" className="hover:text-gray-400">
+                        Instagram
+                      </a>
+                    </li>
+                  </ul>
+                </div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+                <div className="w-full lg:w-1/4 px-4">
+                  <h3 className="text-xl font-medium mb-2">Contact</h3>
+                  <p className="text-gray-400 leading-loose">
+                    Address: 1234 Main Street
+                  </p>
+                  <p className="text-gray-400 leading-loose">
+                    Phone: (555) 555-5555
+                  </p>
+                  <p className="text-gray-400 leading-loose">
+                    Email: info@example.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </>
-  )
+  );
 }
