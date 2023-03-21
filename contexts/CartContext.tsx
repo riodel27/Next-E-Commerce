@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, FC } from "react";
 
 type CartContextType = {
   count: number;
@@ -10,8 +10,12 @@ const CartContext = createContext<CartContextType>({
   addToCart: () => {},
 });
 
-const CartProvider = ({ children }) => {
-  const [count, setCount] = useState(0);
+type CartProviderProps = {
+  children: React.ReactNode;
+};
+
+const CartProvider: FC<CartProviderProps> = ({ children }) => {
+  const [count, setCount] = useState<number>(0);
 
   const addToCart = (productId: number) => {
     setCount(count + 1);

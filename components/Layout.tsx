@@ -1,6 +1,7 @@
 import React from "react";
 import Cart from "./Cart";
 import { CartProvider } from "../contexts/CartContext";
+import Nav from "./Nav";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -9,10 +10,7 @@ type LayoutProps = {
 function Layout({ children }: LayoutProps): JSX.Element {
   return (
     <div>
-      {/* Nav */}
-      <div>
-        <Cart />
-      </div>
+      <Nav />
 
       <main>{children}</main>
     </div>

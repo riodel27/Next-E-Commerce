@@ -17,40 +17,6 @@ export default function Home() {
       <main>
         <div className="flex flex-col justify-center items-center min-h-screen">
           {/* Header section */}
-          <div className="w-full bg-white shadow">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex justify-between items-center h-16">
-                {/* Navigation bar */}
-                <div className="flex-shrink-0">
-                  <Image src="/logo.svg" alt="Logo" height={8} width={8} />
-                </div>
-                <div className="hidden md:block">
-                  <div className="ml-10 flex items-baseline space-x-4">
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-gray-500 font-medium"
-                    >
-                      Home
-                    </a>
-
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-gray-500 font-medium"
-                    >
-                      Shop
-                    </a>
-
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-gray-500 font-medium"
-                    >
-                      Contact
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/* Hero section */}
           <div className="w-full bg-gray-100 py-32">
