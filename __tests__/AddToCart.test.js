@@ -6,7 +6,17 @@ import Cart from "../components/Cart";
 import { CartProvider } from "../contexts/CartContext";
 import Product from "../components/Product";
 
+jest.mock("next/router", () => ({
+  useRouter: jest.fn().mockReturnValue({
+    pathname: "",
+  }),
+}));
+
 describe("Add product to cart", () => {
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it("should add product to cart and increment cart count", () => {
     const product = {
       id: 2,

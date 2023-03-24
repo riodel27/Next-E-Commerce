@@ -1,6 +1,5 @@
 import { Product } from "@/interfaces";
-import React, { useContext, useState } from "react";
-import { useRouter } from "next/router";
+import React, { useContext } from "react";
 import Image from "next/image";
 
 import { CartContext } from "@/contexts/CartContext";
@@ -9,7 +8,7 @@ function Product({ product }: { product: Product }) {
   const { addToCart } = useContext(CartContext);
 
   const handleAddToCart = () => {
-    addToCart(product.id);
+    addToCart(product);
   };
 
   return (

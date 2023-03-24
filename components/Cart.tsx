@@ -1,12 +1,15 @@
 import { CartContext } from "@/contexts/CartContext";
+import { useRouter } from "next/router";
 import React, { useContext } from "react";
 
 function Cart() {
+  const router = useRouter();
+
   const { count } = useContext(CartContext);
 
   return (
     <>
-      <button className="relative w-8 h-8">
+      <button className="relative w-8 h-8" onClick={() => router.push("/cart")}>
         <svg
           className="h-6 w-6 fill-current text-gray-200"
           viewBox="0 0 24 24"
