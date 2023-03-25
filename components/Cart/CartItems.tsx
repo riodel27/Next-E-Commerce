@@ -11,9 +11,10 @@ function CartItems({ products, handleRemoveFromCart }: ProductsProps) {
   return (
     <>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 product-list">
           {products.map((product) => (
             <div
+              data-testid="cart-product-wrapper"
               key={product.id}
               className="bg-white shadow-md rounded-md overflow-hidden"
             >

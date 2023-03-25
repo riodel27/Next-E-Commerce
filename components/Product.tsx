@@ -16,12 +16,14 @@ function Product({ product }: { product: Product }) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex flex-col md:flex-row -mx-4">
           <div className="md:w-1/2 px-4">
-            <Image
-              src={product.image}
-              alt={product.title}
-              width={600}
-              height={600}
-            />
+            {product.image && (
+              <Image
+                src={product.image ?? ""}
+                alt={product.title}
+                width={600}
+                height={600}
+              />
+            )}
           </div>
           <div className="md:w-1/2 px-4 mt-8 md:mt-0">
             <h1 className="text-2xl font-bold text-gray-900">

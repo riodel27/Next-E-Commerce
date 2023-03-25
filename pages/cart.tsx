@@ -12,7 +12,7 @@ function Cart() {
 
   return (
     <div className="min-h-screen">
-      {!count ? (
+      {!products.length ? (
         <>
           <h2>Your cart is empty</h2>
         </>
